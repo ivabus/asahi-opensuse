@@ -9,12 +9,16 @@ Currently I'm working on openSUSE port for Apple Silicon machines.
   - [ ] Test what works or not
 - [ ] Prepare installer
   - [ ] Prepare OBS repos with necessary packages (kernel, m1n1, u-boot, asahi-scripts, etc.)
-  - [ ] Prepare basic (with YaST starting after first boot) rootfs images (and scripts to build them)
+  - [ ] Prepare ba-=sic (cli only, DE) rootfs images (and scripts to build them)
   - [ ] Build installer (for use like general Asahi installer, ex. `curl https://ivabus.dev/suse | sh`)
   - [ ] Provide all types of openSUSE (Leap, Tumbleweed, Leap Micro, MicroOS) for installation.
   - [ ] Test every type of installation
   - [ ] Document things
-  - [ ] Release
+  - [ ] First release
+- [ ] Integrate with YaST
+  - [ ] Make some scripts to let openSUSE be installed, using USB drive and on-device U-Boot
+  - [ ] Somehow tell YaST to not overwrite ESP volume
+  - [ ] Second release (with YaST installer)
 
 ## Contact me
 
