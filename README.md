@@ -1,4 +1,4 @@
-# Asahi openSUSE port details
+# Asahi openSUSE port
 
 Currently I'm working on openSUSE port for Apple Silicon machines.
 
