@@ -5,7 +5,7 @@ Currently I'm working on openSUSE port for Apple Silicon machines.
 ## TODO list
 
 - [ ] Boot openSUSE from USB device with pre-built (by hands) image
-  - [+] Build image
+  - [x] Build image
   - [ ] Test what works or not
 - [ ] Prepare installer
   - [ ] Prepare OBS repos (or just repos) with necessary packages (kernel, m1n1, u-boot, asahi-scripts, etc.)
