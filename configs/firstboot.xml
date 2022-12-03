@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<productDefines  xmlns="http://www.suse.com/1.0/yast2ns"
+    xmlns:config="http://www.suse.com/1.0/configns">
+    <textdomain>firstboot</textdomain>
+    <globals>
+	<installation_layout>
+		<mode>steps</mode>
+		<banner config:type="boolean">false</banner>
+	</installation_layout>
+    </globals>
+    <workflows  config:type="list">
+        <workflow>
+            <defaults>
+                <enable_back>yes</enable_back>
+                <enable_next>yes</enable_next>
+                <archs>all</archs>
+            </defaults>
+            <stage>firstboot</stage>
+            <label>Configuration</label>
+            <mode>installation</mode>
+            <modules  config:type="list">
+                <module>
+                    <label>Network Autosetup</label>
+                    <name>firstboot_setup_dhcp</name>
+                </module>
+                <module>
+                    <label>Language and Keyboard</label>
+                    <enabled config:type="boolean">true</enabled>
+                    <name>firstboot_language_keyboard</name>
+                </module>
+                <module>
+                    <label>Language</label>
+                    <enabled config:type="boolean">true</enabled>
+                    <name>firstboot_language</name>
+                </module>
+                <module>
+                    <label>Keyboard Layout</label>
+                    <enabled config:type="boolean">false</enabled>
+                    <name>firstboot_keyboard</name>
+                </module>
+                <module>
+                    <label>Welcome</label>
+                    <name>firstboot_welcome</name>
+                </module>
+                <module>
+                    <label>License Agreement</label>
+                    <enabled config:type="boolean">true</enabled>
+                    <name>firstboot_licenses</name>
+                </module>
+                <module>
+                    <label>Host Name</label>
+                    <enabled config:type="boolean">true</enabled>
+                    <name>firstboot_hostname</name>
+                </module>
+                <module>
+                    <label>Network</label>
+                    <name>firstboot_network_write</name>
+		    <enabled config:type="boolean">true</enabled>
+                </module>
+                <module>
+                    <enabled config:type="boolean">true</enabled>
+                    <name>firstboot_ssh</name>
+                </module>
+                <module>
+                    <label>Network</label>
+                    <name>inst_lan</name>
+                    <enabled config:type="boolean">true</enabled>
+                      <arguments>
+                        <skip_detection config:type="boolean">false</skip_detection>
+                      </arguments>
+                </module>
+                 <module>
+                    <label>Automatic Configuration</label>
+                    <name>inst_automatic_configuration</name>
+                    <enabled config:type="boolean">false</enabled>
+                 </module>
+                <module>
+                    <label>Time and Date</label>
+                    <enabled config:type="boolean">true</enabled>
+                    <name>firstboot_timezone</name>
+                </module>
+                <module>
+                    <label>NTP Client</label>
+                    <enabled config:type="boolean">false</enabled>
+                    <name>firstboot_ntp</name>
+                </module>
+                <module>
+                    <label>Desktop</label>
+                    <enabled config:type="boolean">true</enabled>
+                    <name>firstboot_desktop</name>
+                </module>
+                <module>
+                    <label>Users</label>
+                    <enabled config:type="boolean">true</enabled>
+                    <name>firstboot_user</name>
+                </module>
+                <module>
+                    <label>Root Password</label>
+                    <enabled config:type="boolean">true</enabled>
+                    <name>firstboot_root</name>
+                </module>
+                <module>
+                    <label>Customer Center</label>
+                    <name>registration</name>
+                    <enabled config:type="boolean">false</enabled>
+                </module>
+                <module>
+                    <label>Hardware</label>
+                    <name>inst_proposal</name>
+                    <enabled config:type="boolean">true</enabled>
+                </module>
+                <module>
+                    <label>Finish Setup</label>
+                    <name>firstboot_write</name>
+                    <enable_back>no</enable_back>
+                    <enable_next>no</enable_next>
+                </module>
+                <module>
+                    <label>Finish Setup</label>
+                    <name>firstboot_finish</name>
+                    <enable_back>no</enable_back>
+                    <enable_next>yes</enable_next>
+                </module>
+
+            </modules>
+        </workflow>
+    </workflows>
+    <texts>
+	<ac_label_1><label>Configuring network...</label></ac_label_1>
+	<ac_label_2><label>Configuring hardware...</label></ac_label_2>
+    </texts>
+</productDefines>
+
