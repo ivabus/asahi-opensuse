@@ -2,8 +2,9 @@
 
 # This script clones & builds all RPMs that are used in repository.
 
-_rcver=6.1
-_asahirel=3
+_rcver=6.2
+_rcrel=2
+_asahirel=1
 pkgrel=1
 _commit_id=asahi-${_rcver}${_rcrel+-rc}${_rcrel}-${_asahirel}
 makethreads=48
