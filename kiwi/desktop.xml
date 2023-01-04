@@ -1,0 +1,18 @@
+<image>
+	<packages type="image" profiles="leap-gnome,tumbleweed-gnome">
+		<package name="patterns-gnome-gnome"/>
+		<package name="patterns-gnome-gnome_basic"/>
+		<package name="patterns-gnome-gnome_basis"/>
+		<package name="patterns-gnome-gnome_internet"/>
+		<package name="patterns-gnome-gnome_x11"/>
+	</packages>
+	<packages type="image" profiles="leap-kde,tumbleweed-kde">
+		<package name="patterns-kde-kde"/>
+		<package name="patterns-kde-kde_plasma"/>
+	</packages>
+	<packages type="image" profiles="leap-xfce,tumbleweed-xfce">
+		<package name="patterns-xfce-xfce"/>
+		<package name="patterns-xfce-xfce_basic"/>
+		<package name="patterns-xfce-xfce_office"/>
+	</packages>
+</image>

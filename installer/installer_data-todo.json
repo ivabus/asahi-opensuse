@@ -1,0 +1,220 @@
+{
+    "os_list": [
+        {
+            "name": "openSUSE Tumbleweed KDE",
+            "default_os_name": "openSUSE Tumbleweed",
+            "boot_object": "m1n1.bin",
+            "next_object": "m1n1/boot.bin",
+            "package": "asahi-plasma-20221122-4.zip",
+            "supported_fw": ["12.3", "12.3.1", "12.4"],
+            "partitions": [
+                {
+                    "name": "EFI",
+                    "type": "EFI",
+                    "size": "500MB",
+                    "format": "fat",
+                    "volume_id": "0x2abf9f91",
+                    "copy_firmware": true,
+                    "copy_installer_data": true,
+                    "source": "esp"
+                },
+                {
+                    "name": "Root",
+                    "type": "Linux",
+                    "size": "12GB",
+                    "expand": true,
+                    "image": "root.img"
+                }
+            ]
+        },
+		{
+            "name": "openSUSE Tumbleweed GNOME",
+            "default_os_name": "openSUSE Tumbleweed",
+            "boot_object": "m1n1.bin",
+            "next_object": "m1n1/boot.bin",
+            "package": "asahi-plasma-20221122-4.zip",
+            "supported_fw": ["12.3", "12.3.1", "12.4"],
+            "partitions": [
+                {
+                    "name": "EFI",
+                    "type": "EFI",
+                    "size": "500MB",
+                    "format": "fat",
+                    "volume_id": "0x2abf9f91",
+                    "copy_firmware": true,
+                    "copy_installer_data": true,
+                    "source": "esp"
+                },
+                {
+                    "name": "Root",
+                    "type": "Linux",
+                    "size": "12GB",
+                    "expand": true,
+                    "image": "root.img"
+                }
+            ]
+        },
+		{
+            "name": "openSUSE Tumbleweed XFCE",
+            "default_os_name": "openSUSE Tumbleweed",
+            "boot_object": "m1n1.bin",
+            "next_object": "m1n1/boot.bin",
+            "package": "asahi-plasma-20221122-4.zip",
+            "supported_fw": ["12.3", "12.3.1", "12.4"],
+            "partitions": [
+                {
+                    "name": "EFI",
+                    "type": "EFI",
+                    "size": "500MB",
+                    "format": "fat",
+                    "volume_id": "0x2abf9f91",
+                    "copy_firmware": true,
+                    "copy_installer_data": true,
+                    "source": "esp"
+                },
+                {
+                    "name": "Root",
+                    "type": "Linux",
+                    "size": "12GB",
+                    "expand": true,
+                    "image": "root.img"
+                }
+            ]
+        },
+		{
+            "name": "openSUSE Tumbleweed base",
+            "default_os_name": "openSUSE Tumbleweed",
+            "boot_object": "m1n1.bin",
+            "next_object": "m1n1/boot.bin",
+            "package": "asahi-plasma-20221122-4.zip",
+            "supported_fw": ["12.3", "12.3.1", "12.4"],
+            "partitions": [
+                {
+                    "name": "EFI",
+                    "type": "EFI",
+                    "size": "500MB",
+                    "format": "fat",
+                    "volume_id": "0x2abf9f91",
+                    "copy_firmware": true,
+                    "copy_installer_data": true,
+                    "source": "esp"
+                },
+                {
+                    "name": "Root",
+                    "type": "Linux",
+                    "size": "12GB",
+                    "expand": true,
+                    "image": "root.img"
+                }
+            ]
+        },
+		{
+            "name": "openSUSE Leap KDE",
+            "default_os_name": "openSUSE Leap",
+            "boot_object": "m1n1.bin",
+            "next_object": "m1n1/boot.bin",
+            "package": "asahi-plasma-20221122-4.zip",
+            "supported_fw": ["12.3", "12.3.1", "12.4"],
+            "partitions": [
+                {
+                    "name": "EFI",
+                    "type": "EFI",
+                    "size": "500MB",
+                    "format": "fat",
+                    "volume_id": "0x2abf9f91",
+                    "copy_firmware": true,
+                    "copy_installer_data": true,
+                    "source": "esp"
+                },
+                {
+                    "name": "Root",
+                    "type": "Linux",
+                    "size": "12GB",
+                    "expand": true,
+                    "image": "root.img"
+                }
+            ]
+        },
+		{
+            "name": "openSUSE Leap GNOME",
+            "default_os_name": "openSUSE Leap",
+            "boot_object": "m1n1.bin",
+            "next_object": "m1n1/boot.bin",
+            "package": "asahi-plasma-20221122-4.zip",
+            "supported_fw": ["12.3", "12.3.1", "12.4"],
+            "partitions": [
+                {
+                    "name": "EFI",
+                    "type": "EFI",
+                    "size": "500MB",
+                    "format": "fat",
+                    "volume_id": "0x2abf9f91",
+                    "copy_firmware": true,
+                    "copy_installer_data": true,
+                    "source": "esp"
+                },
+                {
+                    "name": "Root",
+                    "type": "Linux",
+                    "size": "12GB",
+                    "expand": true,
+                    "image": "root.img"
+                }
+            ]
+        },
+		{
+            "name": "openSUSE Leap XFCE",
+            "default_os_name": "openSUSE Leap",
+            "boot_object": "m1n1.bin",
+            "next_object": "m1n1/boot.bin",
+            "package": "asahi-plasma-20221122-4.zip",
+            "supported_fw": ["12.3", "12.3.1", "12.4"],
+            "partitions": [
+                {
+                    "name": "EFI",
+                    "type": "EFI",
+                    "size": "500MB",
+                    "format": "fat",
+                    "volume_id": "0x2abf9f91",
+                    "copy_firmware": true,
+                    "copy_installer_data": true,
+                    "source": "esp"
+                },
+                {
+                    "name": "Root",
+                    "type": "Linux",
+                    "size": "12GB",
+                    "expand": true,
+                    "image": "root.img"
+                }
+            ]
+        },
+		{
+            "name": "openSUSE Leap base",
+            "default_os_name": "openSUSE Leap",
+            "boot_object": "m1n1.bin",
+            "next_object": "m1n1/boot.bin",
+            "package": "asahi-plasma-20221122-4.zip",
+            "supported_fw": ["12.3", "12.3.1", "12.4"],
+            "partitions": [
+                {
+                    "name": "EFI",
+                    "type": "EFI",
+                    "size": "500MB",
+                    "format": "fat",
+                    "volume_id": "0x2abf9f91",
+                    "copy_firmware": true,
+                    "copy_installer_data": true,
+                    "source": "esp"
+                },
+                {
+                    "name": "Root",
+                    "type": "Linux",
+                    "size": "12GB",
+                    "expand": true,
+                    "image": "root.img"
+                }
+            ]
+        }
+    ]
+}

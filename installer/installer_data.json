@@ -1,0 +1,37 @@
+{
+    "os_list": [
+        {
+            "name": "openSUSE Tumbleweed",
+            "default_os_name": "openSUSE Tumbleweed",
+            "boot_object": "m1n1.bin",
+            "next_object": "m1n1/boot.bin",
+            "package": "installer-suse.zip",
+            "supported_fw": ["12.3", "12.3.1", "12.4"],
+            "partitions": [
+                {
+                    "name": "EFI",
+                    "type": "EFI",
+                    "size": "536870912B",
+                    "format": "fat",
+                    "volume_id": "0xa060cfc3",
+                    "copy_firmware": true,
+                    "copy_installer_data": true,
+                    "source": "esp"
+                },
+                {
+                    "name": "Boot",
+                    "type": "Linux",
+                    "size": "1073741824B",
+                    "image": "boot.img"
+                },
+                {
+                    "name": "Root",
+                    "type": "Linux",
+                    "size": "2970595328B",
+                    "expand": true,
+                    "image": "root.img"
+                }
+            ]
+        }
+    ]
+}
