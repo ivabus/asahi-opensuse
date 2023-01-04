@@ -2,6 +2,10 @@
 
 Currently I'm working on openSUSE port for Apple Silicon machines.
 
+## Current progress
+
+Look at `dev` branch to see the progress.
+
 ## TODO list
 
 - [ ] Boot openSUSE from USB device with pre-built (by hands) image
