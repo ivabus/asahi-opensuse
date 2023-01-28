@@ -1,3 +1,4 @@
 *target*
 scripts/build
 *.DS_Store*
+specs/kernel.spec
