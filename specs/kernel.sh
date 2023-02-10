@@ -2,7 +2,7 @@
 cd=$(pwd)
 _rcver=6.2
 _rcrel=3
-_asahirel=7
+_asahirel=6
 _commit_id=asahi-${_rcver}${_rcrel+-rc}${_rcrel}-${_asahirel}
 
 rpmbuildsources=$(rpm --eval %{_sourcedir})
@@ -17,6 +17,7 @@ cd linux-${_commit_id}
 ver=$(make kernelversion)
 cd $cd
 rm -rf $tmpdir
+
 cat > kernel.spec << EOF
 %define _rcver ${_rcver}
 %define _rcrel ${_rcrel}
@@ -38,6 +39,7 @@ Provides: kernel-drm kernel-%{_rpm_ver} kernel-default kernel kernel-asahi
 BuildRequires: bc binutils bison dwarves
 BuildRequires: (elfutils-libelf-devel or libelf-devel) flex
 BuildRequires: gcc make openssl openssl-devel perl python3 rsync
+Provides:       multiversion(kernel)
 
 # aarch64 as a fallback of _arch in case
 # /usr/lib/rpm/platform/*/macros was not included.
@@ -47,12 +49,14 @@ BuildRequires: gcc make openssl openssl-devel perl python3 rsync
 
 %description
 The Linux Kernel, the operating system core itself
+Requires(post): kmod-zstd
 
 %package headers
 Summary: Header files for the Linux kernel for use by glibc
 Group: Development/System
 Obsoletes: kernel-headers
 Provides: kernel-headers = %{version}
+Provides: glibc-kernheaders
 %description headers
 Kernel-headers includes the C header files that specify the interface
 between the Linux kernel and userspace libraries and programs.  The
