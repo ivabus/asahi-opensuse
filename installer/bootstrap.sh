@@ -7,14 +7,13 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
-export VERSION_FLAG=file:///Users/ivabus/storage.ivabus.dev/asahi-opensuse/installer/latest
-export INSTALLER_BASE=file:///Users/ivabus/storage.ivabus.dev/asahi-opensuse/installer
-export INSTALLER_DATA=file:///Users/ivabus/my/asahi-opensuse/installer/installer_data.json
-export INSTALLER_DATA_ALT=https://ivabus.dev/installer_data.json
-export REPO_BASE=/Users/ivabus/storage.ivabus.dev/asahi-opensuse
+export VERSION_FLAG=https://storage.ivabus.dev/asahi-opensuse/installer/latest
+export INSTALLER_BASE=https://storage.ivabus.dev/asahi-opensuse/installer
+export INSTALLER_DATA=https://storage.ivabus.dev/asahi-opensuse/installer/installer_data.json
+export INSTALLER_DATA_ALT=https://raw.githubusercontent.com/ivabus/asahi-opensuse/main/installer/installer_data.json
+export REPO_BASE=https://storage.ivabus.dev/asahi-opensuse
 
-#TMP="$(mktemp -d)"
-TMP=/tmp/asahi-install
+TMP="$(mktemp -d)"
 
 echo
 echo "Bootstrapping installer:"
