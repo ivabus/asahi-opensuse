@@ -1,7 +1,7 @@
 {
     "os_list": [
         {
-            "name": "openSUSE Tumbleweed",
+            "name": "openSUSE Tumbleweed JeOS",
             "default_os_name": "openSUSE Tumbleweed",
             "boot_object": "m1n1.bin",
             "next_object": "m1n1/boot.bin",
@@ -34,7 +34,7 @@
             ]
         },
         {
-            "name": "openSUSE Tumbleweed",
+            "name": "openSUSE Tumbleweed KDE",
             "default_os_name": "openSUSE Tumbleweed",
             "boot_object": "m1n1.bin",
             "next_object": "m1n1/boot.bin",
@@ -67,7 +67,7 @@
             ]
         },
         {
-            "name": "openSUSE Tumbleweed",
+            "name": "openSUSE Tumbleweed GNOME",
             "default_os_name": "openSUSE Tumbleweed",
             "boot_object": "m1n1.bin",
             "next_object": "m1n1/boot.bin",
@@ -100,7 +100,7 @@
             ]
         },
         {
-            "name": "openSUSE Tumbleweed",
+            "name": "openSUSE Tumbleweed XFCE",
             "default_os_name": "openSUSE Tumbleweed",
             "boot_object": "m1n1.bin",
             "next_object": "m1n1/boot.bin",
