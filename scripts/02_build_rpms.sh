@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # This script clones & builds all packages using .spec files.
 

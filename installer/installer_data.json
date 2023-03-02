@@ -5,7 +5,7 @@
             "default_os_name": "openSUSE Tumbleweed",
             "boot_object": "m1n1.bin",
             "next_object": "m1n1/boot.bin",
-            "package": "installer-suse.zip",
+            "package": "Tumbleweed-JeOS.zip.zip",
             "supported_fw": ["12.3", "12.3.1", "12.4"],
             "partitions": [
                 {
@@ -13,7 +13,7 @@
                     "type": "EFI",
                     "size": "536870912B",
                     "format": "fat",
-                    "volume_id": "0xa060cfc3",
+                    "volume_id": "0x163ea456",
                     "copy_firmware": true,
                     "copy_installer_data": true,
                     "source": "esp"
@@ -27,7 +27,106 @@
                 {
                     "name": "Root",
                     "type": "Linux",
-                    "size": "2970595328B",
+                    "size": "3426725888B",
+                    "expand": true,
+                    "image": "root.img"
+                }
+            ]
+        },
+        {
+            "name": "openSUSE Tumbleweed",
+            "default_os_name": "openSUSE Tumbleweed",
+            "boot_object": "m1n1.bin",
+            "next_object": "m1n1/boot.bin",
+            "package": "Tumbleweed-KDE.zip.zip",
+            "supported_fw": ["12.3", "12.3.1", "12.4"],
+            "partitions": [
+                {
+                    "name": "EFI",
+                    "type": "EFI",
+                    "size": "536870912B",
+                    "format": "fat",
+                    "volume_id": "0x22de729d",
+                    "copy_firmware": true,
+                    "copy_installer_data": true,
+                    "source": "esp"
+                },
+                {
+                    "name": "Boot",
+                    "type": "Linux",
+                    "size": "1073741824B",
+                    "image": "boot.img"
+                },
+                {
+                    "name": "Root",
+                    "type": "Linux",
+                    "size": "3426725888B",
+                    "expand": true,
+                    "image": "root.img"
+                }
+            ]
+        },
+        {
+            "name": "openSUSE Tumbleweed",
+            "default_os_name": "openSUSE Tumbleweed",
+            "boot_object": "m1n1.bin",
+            "next_object": "m1n1/boot.bin",
+            "package": "Tumbleweed-GNOME.zip.zip",
+            "supported_fw": ["12.3", "12.3.1", "12.4"],
+            "partitions": [
+                {
+                    "name": "EFI",
+                    "type": "EFI",
+                    "size": "536870912B",
+                    "format": "fat",
+                    "volume_id": "0x2fdf3c2a",
+                    "copy_firmware": true,
+                    "copy_installer_data": true,
+                    "source": "esp"
+                },
+                {
+                    "name": "Boot",
+                    "type": "Linux",
+                    "size": "1073741824B",
+                    "image": "boot.img"
+                },
+                {
+                    "name": "Root",
+                    "type": "Linux",
+                    "size": "3426725888B",
+                    "expand": true,
+                    "image": "root.img"
+                }
+            ]
+        },
+        {
+            "name": "openSUSE Tumbleweed",
+            "default_os_name": "openSUSE Tumbleweed",
+            "boot_object": "m1n1.bin",
+            "next_object": "m1n1/boot.bin",
+            "package": "Tumbleweed-XFCE.zip.zip",
+            "supported_fw": ["12.3", "12.3.1", "12.4"],
+            "partitions": [
+                {
+                    "name": "EFI",
+                    "type": "EFI",
+                    "size": "536870912B",
+                    "format": "fat",
+                    "volume_id": "0x3d67bec6",
+                    "copy_firmware": true,
+                    "copy_installer_data": true,
+                    "source": "esp"
+                },
+                {
+                    "name": "Boot",
+                    "type": "Linux",
+                    "size": "1073741824B",
+                    "image": "boot.img"
+                },
+                {
+                    "name": "Root",
+                    "type": "Linux",
+                    "size": "3426725888B",
                     "expand": true,
                     "image": "root.img"
                 }

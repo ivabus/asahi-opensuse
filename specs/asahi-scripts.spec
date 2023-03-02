@@ -14,7 +14,6 @@ Requires:       growpart
 Requires:       coreutils
 Requires:       diffutils
 Requires:       dosfstools
-Requires:       kernel-firmware-all
 Requires:       sed
 Requires:       tar
 Requires:       asahi-dtbs

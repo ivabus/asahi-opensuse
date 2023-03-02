@@ -25,7 +25,7 @@ cat > kernel.spec << EOF
 %define _commit_id asahi-%{_rcver}%(if [ ! %_rcrel == "0" ]; then echo -rc%{_rcrel}; fi)-%{_asahirel}
 %define _rpm_ver %{_rcver}%(if [ ! %_rcrel == "0" ]; then echo _rc%{_rcrel}; fi)_%{_asahirel}_asahi_suse
 %define ver ${ver}-asahi-suse
-Name: kernel
+Name: kernel-asahi
 Summary: The Linux Kernel
 Version: %{_rpm_ver}
 Release: 1
@@ -35,7 +35,7 @@ Vendor: The Linux Community
 URL: https://www.kernel.org
 Source0: https://github.com/AsahiLinux/linux/archive/refs/tags/%{_commit_id}.tar.gz
 Source1: config-%{_commit_id}
-Provides: kernel-drm kernel-%{_rpm_ver} kernel-default kernel kernel-asahi
+Provides: kernel-drm kernel-base kernel-%{_rpm_ver} kernel-default kernel kernel-asahi
 BuildRequires: bc binutils bison dwarves
 BuildRequires: (elfutils-libelf-devel or libelf-devel) flex
 BuildRequires: gcc make openssl openssl-devel perl python3 rsync
@@ -54,9 +54,7 @@ Requires(post): kmod-zstd
 %package headers
 Summary: Header files for the Linux kernel for use by glibc
 Group: Development/System
-Obsoletes: kernel-headers
-Provides: kernel-headers = %{version}
-Provides: glibc-kernheaders
+Provides: kernel-headers
 %description headers
 Kernel-headers includes the C header files that specify the interface
 between the Linux kernel and userspace libraries and programs.  The
@@ -68,7 +66,7 @@ glibc package.
 Summary: Development package for building kernel modules to match the %{_rpm_ver} kernel
 Group: System Environment/Kernel
 AutoReqProv: no
-%description -n kernel-devel
+%description devel
 This package provides kernel headers and makefiles sufficient to build modules
 against the %{_rpm_ver} kernel package.
 
@@ -154,4 +152,4 @@ fi
 %defattr (-, root, root)
 /lib/modules/*-ARCH/dtbs/
 EOF
-echo "Prepared kernel.spec for $ver"
+echo "Prepared kernel.spec for $ver-asahi-suse"

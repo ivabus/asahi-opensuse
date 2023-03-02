@@ -26,8 +26,8 @@ passwd -l root
 # Setup default services
 #--------------------------------------
 
-## Enable NetworkManager
-systemctl enable NetworkManager.service
+## Enable wicked
+systemctl enable wicked.service
 ## Enable chrony
 systemctl enable chronyd.service
 ## Enable persistent journal

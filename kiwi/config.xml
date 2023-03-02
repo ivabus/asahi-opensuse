@@ -15,10 +15,22 @@
         <keytable>us</keytable>
         <timezone>UTC</timezone>
         <rpm-check-signatures>true</rpm-check-signatures>
-        <type image="oem" filesystem="btrfs" firmware="uefi" bootpartition="true" bootpartsize="1024" bootfilesystem="ext4" efipartsize="512" target_blocksize="4096">
+        <rpm-excludedocs>true</rpm-excludedocs>
+        <type image="oem" filesystem="btrfs" fsmountoptions="x-systemd.growfs,compress=zstd:1" btrfs_root_is_snapshot="true" firmware="uefi" bootpartition="true" bootpartsize="1024" bootfilesystem="ext4" efipartsize="512" target_blocksize="4096">
             <bootloader name="grub2" console="gfxterm"/>
+            <systemdisk name="asahi">
+                <volume name="home"/>
+                <volume name="root"/>
+                <volume name="tmp"/>
+                <volume name="opt"/>
+                <volume name="srv"/>
+                <volume name="boot/grub2/arm64-efi" mountpoint="boot/grub2/arm64-efi"/>
+                <volume name="usr/local"/>
+                <volume name="var" copy_on_write="false"/>
+            </systemdisk>
             <oemconfig>
 				<oem-resize>false</oem-resize>
+                <oem-skip-verify>true</oem-skip-verify>
 			</oemconfig>
         </type>
     </preferences>
@@ -28,13 +40,19 @@
     <profiles>
         <profile name="Tumbleweed" description="Tumbleweed base"/>
         <profile name="Leap" description="Leap base"/>
+        <profile name="Leap-JeOS" description="Leap JeOS">
+            <requires profile="Leap"/>
+        </profile>
         <profile name="Leap-KDE" description="Leap with KDE desktop">
-            <requires profile="Tumbleweed"/>
+            <requires profile="Leap"/>
         </profile>
         <profile name="Leap-GNOME" description="Leap with GNOME desktop">
-            <requires profile="Tumbleweed"/>
+            <requires profile="Leap"/>
         </profile>
         <profile name="Leap-XFCE" description="Leap with XFCE desktop">
+            <requires profile="Leap"/>
+        </profile>
+        <profile name="Tumbleweed-JeOS" description="Tumbleweed JeOS">
             <requires profile="Tumbleweed"/>
         </profile>
         <profile name="Tumbleweed-KDE" description="Tumbleweed with KDE desktop">
@@ -49,7 +67,7 @@
     </profiles>
     <include from="this://./repos.xml"/>
     <!-- Asahi repo -->
-	<repository type="rpm-md" alias="asahi" sourcetype="baseurl" priority="1" imageinclude="true">
+	<repository type="rpm-md" alias="asahi" sourcetype="baseurl" priority="1">
 		<source path="https://storage.ivabus.dev/asahi-opensuse/repo/">
 			<signing key="https://ivabus.dev/key.asc"/>
 		</source>
@@ -61,6 +79,7 @@
         <package name="gawk"/>
         <package name="grep"/>
         <package name="gzip"/>
+        <package name="glibc"/>
         <package name="glibc-locale"/>
         <package name="cracklib-dict-full"/>
         <package name="ca-certificates"/>
@@ -72,6 +91,7 @@
         <package name="patterns-base-base"/>
         <package name="patterns-base-apparmor"/>
         <package name="patterns-openSUSE-base"/>
+        <package name="aaa_base-extras"/>
         <package name="acl"/>
         <package name="btrfsprogs"/>
         <package name="btrfsmaintenance"/>
@@ -92,9 +112,9 @@
         <package name="rollback-helper"/>
         <package name="snapper"/>
         <package name="firewalld"/>
+        <package name="wicked"/>
         <package name="systemd"/>
         <package name="timezone"/>
-        <package name="NetworkManager"/>
         <package name="wpa_supplicant"/>
         <package name="iproute2"/>
         <package name="openssh"/>
@@ -109,7 +129,9 @@
         <package name="yast2-firstboot"/>
     </packages>
     <packages type="image">
-        <package name="kernel"/>
+        <package name="kernel-default"/>
+        <package name="kernel-asahi-dtbs"/>
+        <package name="kernel-firmware"/>
         <package name="m1n1"/>
         <package name="uboot-asahi"/>
         <package name="asahi-scripts"/>

@@ -1,23 +1,23 @@
 <image>
 	<!-- Tumbleweed repositories -->
-	<repository type="rpm-md" alias="repo-oss" profiles="Tumbleweed" imageinclude="true">
+	<repository type="rpm-md" alias="repo-oss" profiles="Tumbleweed">
 		<source path="http://download.opensuse.org/ports/aarch64/tumbleweed/repo/oss/"/>
 	</repository>
-	<repository type="rpm-md" alias="repo-debug" profiles="Tumbleweed" imageinclude="true">
+	<repository type="rpm-md" alias="repo-debug" profiles="Tumbleweed">
 		<source path="http://download.opensuse.org/ports/aarch64/debug/tumbleweed/repo/oss/"/>
 	</repository>
-	<repository type="rpm-md" alias="repo-update" profiles="Tumbleweed" imageinclude="true">
+	<repository type="rpm-md" alias="repo-update" profiles="Tumbleweed">
 		<source path="http://download.opensuse.org/ports/aarch64/update/tumbleweed/"/>
 	</repository>
-	<repository type="rpm-md" alias="repo-src-oss" profiles="Tumbleweed" imageinclude="true">
+	<repository type="rpm-md" alias="repo-src-oss" profiles="Tumbleweed">
 		<source path="http://download.opensuse.org/ports/aarch64/source/tumbleweed/repo/oss/"/>
 	</repository>
 
 	<!-- Leap repositories -->
-	<repository type="rpm-md" alias="repo-oss" profiles="Leap" imageinclude="true">
+	<repository type="rpm-md" alias="repo-oss" profiles="Leap">
 		<source path="http://download.opensuse.org/distribution/leap/15.3/repo/oss"/>
 	</repository>
-	<repository type="rpm-md" alias="repo-non-oss" profiles="Leap" imageinclude="true">
+	<repository type="rpm-md" alias="repo-non-oss" profiles="Leap">
 		<source path="http://download.opensuse.org/distribution/leap/15.3/repo/non-oss/"/>
 	</repository>
 </image>

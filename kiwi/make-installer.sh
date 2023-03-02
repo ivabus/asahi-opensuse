@@ -16,8 +16,8 @@ requireCommands() {
 }
 
 date=$(date +%Y%m%d)
-image="${1:-outdir/asahi-opensuse.aarch64-0.0.1.raw}"
-package="installer-suse"
+image="${1}"
+package="${2}"
 
 if [ ! -r "$image" ]; then
   fail "$image does not exist or cannot be read!"
@@ -56,7 +56,7 @@ pushd "${workdir}/package" > /dev/null
 popd > /dev/null
 
 	
-cat > installer_data.json <<EOF
+cat > installer_data-$package.json <<EOF
 {
     "os_list": [
         {

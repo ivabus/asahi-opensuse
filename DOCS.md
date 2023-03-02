@@ -1,7 +1,14 @@
 # Docs
 
-Build image with kiwi-ng
+Use `kiwi/build-all.sh` for building all images for installer.
 
-```
-kiwi-ng -profile=<image_profile> --color-output system build --description ./ --target-dir ./outdir
-```
+## All images
+
+- Tumbleweed-JeOS
+- Tumbleweed-KDE
+- Tumbleweed-GNOME
+- Tumbleweed-XFCE
+- Leap-JeOS
+- Leap-KDE
+- Leap-GNOME
+- Leap-XFCE
