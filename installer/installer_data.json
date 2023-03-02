@@ -5,7 +5,7 @@
             "default_os_name": "openSUSE Tumbleweed",
             "boot_object": "m1n1.bin",
             "next_object": "m1n1/boot.bin",
-            "package": "Tumbleweed-JeOS.zip.zip",
+            "package": "Tumbleweed-JeOS.zip",
             "supported_fw": ["12.3", "12.3.1", "12.4"],
             "partitions": [
                 {
@@ -38,7 +38,7 @@
             "default_os_name": "openSUSE Tumbleweed",
             "boot_object": "m1n1.bin",
             "next_object": "m1n1/boot.bin",
-            "package": "Tumbleweed-KDE.zip.zip",
+            "package": "Tumbleweed-KDE.zip",
             "supported_fw": ["12.3", "12.3.1", "12.4"],
             "partitions": [
                 {
@@ -71,7 +71,7 @@
             "default_os_name": "openSUSE Tumbleweed",
             "boot_object": "m1n1.bin",
             "next_object": "m1n1/boot.bin",
-            "package": "Tumbleweed-GNOME.zip.zip",
+            "package": "Tumbleweed-GNOME.zip",
             "supported_fw": ["12.3", "12.3.1", "12.4"],
             "partitions": [
                 {
@@ -104,7 +104,7 @@
             "default_os_name": "openSUSE Tumbleweed",
             "boot_object": "m1n1.bin",
             "next_object": "m1n1/boot.bin",
-            "package": "Tumbleweed-XFCE.zip.zip",
+            "package": "Tumbleweed-XFCE.zip",
             "supported_fw": ["12.3", "12.3.1", "12.4"],
             "partitions": [
                 {
