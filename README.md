@@ -6,7 +6,7 @@ Currently I'm working on openSUSE port for Apple Silicon machines.
 
 ## Current progress
 
-Look at `dev` branch to see the progress. [TODO](./TODO.md)
+[TODO](./TODO.md)
 
 ## Contact me
 
