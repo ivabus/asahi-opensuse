@@ -13,3 +13,7 @@
 - [ ] First release
 ------
 - [ ] Provide Leap Micro and MicroOS for installation.
+
+## What to fix
+
+- kernel building (current kernel.sh creates "invalid" .spec file, which conflicts with glibc, see [#2](https://github.com/ivabus/asahi-opensuse/issues/2))
