@@ -1,6 +1,6 @@
-# asahi-opensuse
+# SEE [mrkcee/asahi-opensuse](https://github.com/mrkcee/asahi-opensuse)
 
-WILL NOT BE FINISHED BY ME (NOT ENOUGH TIME AND DESIRE)
+# asahi-opensuse
 
 > Port of openSUSE for Apple Silicon
 
